@@ -1,0 +1,39 @@
+.table-container {
+  display: flex;
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th,
+td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.fixed-col {
+  background: rgb(232, 2, 2);
+  z-index: 2;
+}
+
+.start-fixed:nth-child(3) {
+  left: 0;
+}
+
+.start-fixed:nth-child(2) {
+  left: 100px;
+}
+
+.start-fixed:nth-child(3) {
+  left: 200px;
+}
+
+.end-fixed {
+  right: 0;
+}
