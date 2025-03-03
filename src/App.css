@@ -60,3 +60,32 @@ input {
 .table-container::-webkit-scrollbar-track {
   background: #f4f4f4;
 }
+
+.transaction-form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.select-container {
+  display: flex;
+  gap: 20px;
+}
+
+.custom-button {
+  padding: 12px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.custom-button:hover {
+  background-color: #0056b3;
+}

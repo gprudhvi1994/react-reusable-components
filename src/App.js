@@ -1,7 +1,15 @@
+import { useState } from "react";
 import CustomTable from "./CustomTable";
-import DynamicTable from "./DynamicTable";
+import SelectDropdown from "./SelectDropdown";
+import Modal from "./Model";
 
 function App() {
+  const [formData, setFormData] = useState({
+    transactionGroup: "",
+    transactionType: "",
+  });
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const data = [
     {
       userId: 1,
@@ -51,18 +59,69 @@ function App() {
     },
   ];
 
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormData((prevData) => ({
+      ...prevData,
+      [name]: value,
+    }));
+
+    console.log(`Updated ${name}:`, value);
+  };
+
   const inputColumns = ["title", "priority", "notes"];
   const fixedColumns = ["userId", "id", "priorityLevel", "feedback"];
+
+  const transactionGroups = ["Group 1", "Group 2", "Group 3"];
+  const transactionTypes = ["Type 1", "Type 2", "Type 3"];
   return (
     <div>
-      {/* <DynamicTable
-        fixedColumns={["Column 1", "Column 2", "Column 3", "Column 20"]}
-      /> */}
+      <div className="transaction-form">
+        {/* Select Dropdowns using Reusable Component */}
+        <div className="select-container">
+          <SelectDropdown
+            label="Transaction Group"
+            name="transactionGroup"
+            options={transactionGroups}
+            value={formData.transactionGroup}
+            onChange={handleChange}
+          />
+          <SelectDropdown
+            label="Transaction Type"
+            name="transactionType"
+            options={transactionTypes}
+            value={formData.transactionType}
+            onChange={handleChange}
+          />
+        </div>
+
+        <div className="button-container">
+          <button
+            onClick={() => setIsModalOpen(true)}
+            className="custom-button"
+          >
+            Create
+          </button>
+        </div>
+      </div>
       <CustomTable
         data={data}
-        inputColumns={inputColumns}
+        // inputColumns={inputColumns}
         fixedColumns={fixedColumns}
       />
+
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
+        <CustomTable
+          data={data}
+          inputColumns={inputColumns}
+          fixedColumns={fixedColumns}
+        />
+        <div>
+          <button>Save</button>
+          <button>Submit</button>
+          <button>Cancel Request</button>
+        </div>
+      </Modal>
     </div>
   );
 }
