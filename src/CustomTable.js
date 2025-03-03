@@ -1,11 +1,16 @@
 import React, { useState } from "react";
 import "./App.css";
 
-const CustomTable = ({ data, inputColumns = [], fixedColumns = [] }) => {
+const CustomTable = ({
+  data,
+  headers,
+  inputColumns = [],
+  fixedColumns = [],
+}) => {
   const [tableData, setTableData] = useState(data);
-  const columns = Object.keys(data[0] || {});
+  const columns = headers.map((header) => header.key);
 
-  const fixedStartColumns = fixedColumns.slice(0, 3);
+  const fixedStartColumns = fixedColumns.slice(0, 4);
   const fixedEndColumns = fixedColumns.slice(-1);
   const scrollableColumns = columns.filter(
     (col) => !fixedStartColumns.includes(col) && !fixedEndColumns.includes(col)
@@ -17,8 +22,6 @@ const CustomTable = ({ data, inputColumns = [], fixedColumns = [] }) => {
     setTableData(newData);
   };
 
-  console.log(fixedColumns, "fx");
-
   return (
     <div className="table-container">
       <table>
@@ -26,17 +29,17 @@ const CustomTable = ({ data, inputColumns = [], fixedColumns = [] }) => {
           <tr>
             {fixedStartColumns.map((col) => (
               <th key={col} className="fixed-col start-fixed">
-                {col}
+                {headers.find((header) => header.key === col)?.label}
               </th>
             ))}
             {scrollableColumns.map((col) => (
               <th key={col} className="scrollable-col">
-                {col}
+                {headers.find((header) => header.key === col)?.label}
               </th>
             ))}
             {fixedEndColumns.map((col) => (
               <th key={col} className="fixed-col end-fixed">
-                {col}
+                {headers.find((header) => header.key === col)?.label}
               </th>
             ))}
           </tr>
@@ -53,7 +56,7 @@ const CustomTable = ({ data, inputColumns = [], fixedColumns = [] }) => {
                 <td key={col} className="scrollable-col">
                   {inputColumns.includes(col) ? (
                     <input
-                      type="text"
+                      type="number"
                       value={row[col]}
                       onChange={(e) =>
                         handleInputChange(rowIndex, col, e.target.value)

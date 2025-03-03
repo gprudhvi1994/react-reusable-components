@@ -12,50 +12,169 @@ function App() {
 
   const data = [
     {
-      userId: 1,
-      id: 1,
-      title: "delectus aut autem",
-      completed: false,
-      priority: "High",
-      assignedTo: "John",
-      createdAt: "2024-02-28",
-      updatedAt: "2024-02-29",
-      status: "Pending",
-      category: "Work",
-      dueDate: "2024-03-05",
-      progress: "50%",
-      notes: "Requires review",
-      tags: "urgent, important",
-      estimatedTime: "4h",
-      actualTime: "2h",
-      client: "ABC Corp",
-      location: "Remote",
-      reviewer: "Alice",
-      feedback: "Needs changes",
-      priorityLevel: 3,
+      docType: "CR",
+      condType: "INV",
+      condValue: "FDT",
+      careerBand: "OB",
+      categoury: "CR",
+      tnxGroup: "ARIBA REQUISITION",
+      tnxTypeDescription:
+        "Ariba Requesition - General Authority and Nonconsulting",
+      priority: 1,
+      amount: 300000000,
+      currency: "USD",
+      doaComments: "-",
+      activeIndicator: "",
     },
     {
-      userId: 1,
-      id: 2,
-      title: "quis ut nam facilis et officia qui",
-      completed: false,
-      priority: "Medium",
-      assignedTo: "Jane",
-      createdAt: "2024-02-25",
-      updatedAt: "2024-02-27",
-      status: "In Progress",
-      category: "Personal",
-      dueDate: "2024-03-10",
-      progress: "30%",
-      notes: "Follow up needed",
-      tags: "important",
-      estimatedTime: "2h",
-      actualTime: "1h",
-      client: "XYZ Ltd",
-      location: "Office",
-      reviewer: "Bob",
-      feedback: "Looks good",
-      priorityLevel: 2,
+      docType: "CR",
+      condType: "INV",
+      condValue: "FDT",
+      careerBand: "OB",
+      categoury: "CR",
+      tnxGroup: "ARIBA REQUISITION",
+      tnxTypeDescription:
+        "Ariba Requesition - General Authority and Nonconsulting",
+      priority: 1,
+      amount: 300000000,
+      currency: "USD",
+      doaComments: "-",
+      activeIndicator: "",
+    },
+    {
+      docType: "CR",
+      condType: "INV",
+      condValue: "FDT",
+      careerBand: "OB",
+      categoury: "CR",
+      tnxGroup: "ARIBA REQUISITION",
+      tnxTypeDescription:
+        "Ariba Requesition - General Authority and Nonconsulting",
+      priority: 1,
+      amount: 300000000,
+      currency: "USD",
+      doaComments: "-",
+      activeIndicator: "",
+    },
+    {
+      docType: "CR",
+      condType: "INV",
+      condValue: "FDT",
+      careerBand: "OB",
+      categoury: "CR",
+      tnxGroup: "ARIBA REQUISITION",
+      tnxTypeDescription:
+        "Ariba Requesition - General Authority and Nonconsulting",
+      priority: 1,
+      amount: 300000000,
+      currency: "USD",
+      doaComments: "-",
+      activeIndicator: "",
+    },
+    {
+      docType: "CR",
+      condType: "INV",
+      condValue: "FDT",
+      careerBand: "OB",
+      categoury: "CR",
+      tnxGroup: "ARIBA REQUISITION",
+      tnxTypeDescription:
+        "Ariba Requesition - General Authority and Nonconsulting",
+      priority: 1,
+      amount: 300000000,
+      currency: "USD",
+      doaComments: "-",
+      activeIndicator: "",
+    },
+    {
+      docType: "CR",
+      condType: "INV",
+      condValue: "FDT",
+      careerBand: "OB",
+      categoury: "CR",
+      tnxGroup: "ARIBA REQUISITION",
+      tnxTypeDescription:
+        "Ariba Requesition - General Authority and Nonconsulting",
+      priority: 1,
+      amount: 300000000,
+      currency: "USD",
+      doaComments: "-",
+      activeIndicator: "",
+    },
+    {
+      docType: "CR",
+      condType: "INV",
+      condValue: "FDT",
+      careerBand: "OB",
+      categoury: "CR",
+      tnxGroup: "ARIBA REQUISITION",
+      tnxTypeDescription:
+        "Ariba Requesition - General Authority and Nonconsulting",
+      priority: 1,
+      amount: 300000000,
+      currency: "USD",
+      doaComments: "-",
+      activeIndicator: "",
+    },
+    {
+      docType: "CR",
+      condType: "INV",
+      condValue: "FDT",
+      careerBand: "OB",
+      categoury: "CR",
+      tnxGroup: "ARIBA REQUISITION",
+      tnxTypeDescription:
+        "Ariba Requesition - General Authority and Nonconsulting",
+      priority: 1,
+      amount: 300000000,
+      currency: "USD",
+      doaComments: "-",
+      activeIndicator: "",
+    },
+    {
+      docType: "CR",
+      condType: "INV",
+      condValue: "FDT",
+      careerBand: "OB",
+      categoury: "CR",
+      tnxGroup: "ARIBA REQUISITION",
+      tnxTypeDescription:
+        "Ariba Requesition - General Authority and Nonconsulting",
+      priority: 1,
+      amount: 300000000,
+      currency: "USD",
+      doaComments: "-",
+      activeIndicator: "",
+    },
+    {
+      docType: "CR",
+      condType: "INV",
+      condValue: "FDT",
+      careerBand: "OB",
+      categoury: "CR",
+      tnxGroup: "ARIBA REQUISITION",
+      tnxTypeDescription:
+        "Ariba Requesition - General Authority and Nonconsulting",
+      priority: 1,
+      amount: 300000000,
+      currency: "USD",
+      doaComments: "-",
+      activeIndicator: "",
+    },
+    {
+      docType: "CR",
+      condType: "INV",
+      condValue: "FDT",
+      careerBand: "OB",
+      categoury: "CR",
+      tnxGroup: "ARIBA REQUISITION",
+      tnxTypeDescription:
+        "Ariba Requesition - General Authority and Nonconsulting",
+      priority: 1,
+      amount: 300000000,
+      currency: "USD",
+      doaComments: "-",
+      activeIndicator: "",
     },
   ];
 
@@ -69,15 +188,35 @@ function App() {
     console.log(`Updated ${name}:`, value);
   };
 
-  const inputColumns = ["title", "priority", "notes"];
-  const fixedColumns = ["userId", "id", "priorityLevel", "feedback"];
+  const fixedColumns = [
+    "docType",
+    "condType",
+    "condValue",
+    "careerBand",
+    "activeIndicator",
+  ];
+  const headers = [
+    { key: "docType", label: "Doc Type" },
+    { key: "condType", label: "Cond Type" },
+    { key: "condValue", label: "Cond Value" },
+    { key: "careerBand", label: "Career Band" },
+    { key: "categoury", label: "Categoury" },
+    { key: "tnxGroup", label: "Tnx Group" },
+    { key: "tnxTypeDescription", label: "Tnx Type Description" },
+    { key: "priority", label: "Priority" },
+    { key: "amount", label: "Amount" },
+    { key: "currency", label: "Currency" },
+    { key: "doaComments", label: "DOA Comments" },
+    { key: "activeIndicator", label: "Active Indicator" },
+  ];
+
+  const inputColumns = ["amount"];
 
   const transactionGroups = ["Group 1", "Group 2", "Group 3"];
   const transactionTypes = ["Type 1", "Type 2", "Type 3"];
   return (
     <div>
       <div className="transaction-form">
-        {/* Select Dropdowns using Reusable Component */}
         <div className="select-container">
           <SelectDropdown
             label="Transaction Group"
@@ -104,15 +243,13 @@ function App() {
           </button>
         </div>
       </div>
-      <CustomTable
-        data={data}
-        // inputColumns={inputColumns}
-        fixedColumns={fixedColumns}
-      />
+
+      <CustomTable data={data} headers={headers} fixedColumns={fixedColumns} />
 
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)}>
         <CustomTable
           data={data}
+          headers={headers}
           inputColumns={inputColumns}
           fixedColumns={fixedColumns}
         />
